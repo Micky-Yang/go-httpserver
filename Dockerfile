@@ -1,3 +1,4 @@
+# localhost build and test
 #FROM golang:1.16 as build
 #WORKDIR /app
 #COPY ./go.mod .
@@ -11,6 +12,8 @@
 #COPY --from=build /build/httpserver /httpserver
 #ENTRYPOINT ["/httpserver"]
 
+
+# For Tekton Pipeline
 FROM centos:centos7 as run
 COPY httpserver /httpserver
 ENTRYPOINT ["/httpserver"]
