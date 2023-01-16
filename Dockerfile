@@ -12,5 +12,5 @@
 #ENTRYPOINT ["/httpserver"]
 
 FROM centos:centos7 as run
-COPY build/httpserver /httpserver
+COPY httpserver /httpserver
 ENTRYPOINT ["/httpserver"]
